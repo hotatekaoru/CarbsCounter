@@ -1,0 +1,21 @@
+# EditorConfig: http://editorconfig.org
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+# 行末スペースを削除: 有
+trim_trailing_whitespace = true
+# ファイル末尾の改行: 有
+insert_final_newline = true
+# インデントスタイル: スペース
+indent_style = space
+
+[*.{yml, json}]
+indent_size = 2
+
+[*.{kt, kts, java}]
+indent_size = 4
+# GitHub上だと120超えると見辛くなる
+# それ以下だと、行数が増えて見辛くなる
+max_line_length = 120
