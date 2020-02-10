@@ -9,10 +9,10 @@ class MainActivity : AppCompatActivity() {
 
     private val interactor = CarbsInteractor(this)
 
-    lateinit var totalCountTextView: TextView
-    lateinit var riceCountTextView: TextView
-    lateinit var snackCountTextView: TextView
-    lateinit var juiceCountTextView: TextView
+    private lateinit var totalCountTextView: TextView
+    private lateinit var riceCountTextView: TextView
+    private lateinit var snackCountTextView: TextView
+    private lateinit var juiceCountTextView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun reloadLabels() {
-        val carbs = interactor.loadCarbsCounts()
+        val carbs = interactor.loadCarbs()
         riceCountTextView.text = carbs.rice.toString()
         snackCountTextView.text = carbs.snack.toString()
         juiceCountTextView.text = carbs.juice.toString()

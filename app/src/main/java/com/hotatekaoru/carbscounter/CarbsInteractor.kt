@@ -29,7 +29,7 @@ class CarbsInteractor(private val context: Context) {
         prefs.apply()
     }
 
-    internal fun loadCarbsCounts(): Carbs {
+    internal fun loadCarbs(): Carbs {
         val prefs = context.getSharedPreferences(PREFS_NAME, 0)
         return Carbs(
             rice = prefs.getInt(KEY_RICE, 0),
