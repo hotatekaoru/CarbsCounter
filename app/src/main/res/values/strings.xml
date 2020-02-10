@@ -6,4 +6,6 @@
     <string name="count_unit">回</string>
     <string name="initial_count">0</string>
     <string name="total">合計</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 </resources>
