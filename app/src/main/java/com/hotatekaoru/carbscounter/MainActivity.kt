@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun reloadLabels() {
-        val carbs = interactor.loadCarbsCounts()
+        val carbs = interactor.loadCarbs()
         riceCountTextView.text = carbs.rice.toString()
         snackCountTextView.text = carbs.snack.toString()
         juiceCountTextView.text = carbs.juice.toString()
