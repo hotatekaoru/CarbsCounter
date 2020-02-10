@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">CarbsCounter</string>
+    <string name="app_name">糖質カウンター 😨</string>
+    <string name="rice">🍚 炭水化物のご飯（米・パンなど）🍞</string>
+    <string name="snack">🍩 お菓子・砂糖 🍪</string>
+    <string name="juice">🍹 ジュース・ビールなど 🍺</string>
+    <string name="count_unit">回</string>
+    <string name="initial_count">0</string>
+    <string name="total">合計</string>
 </resources>
