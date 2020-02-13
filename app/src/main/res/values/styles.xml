@@ -15,4 +15,35 @@
         <item name="android:gravity">center_vertical</item>
         <item name="android:drawablePadding">16dp</item>
     </style>
+
+    <style name="WidgetButton" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:drawablePadding">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:background">@drawable/widget_button_background</item>
+        <item name="android:clickable">true</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="WidgetCarbLabel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="WidgetVerticalSpace">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="WidgetHorizontalSpace">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+    </style>
 </resources>

@@ -1,0 +1,74 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/widgetBackground"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/widget_margin">
+
+    <TextView style="@style/WidgetVerticalSpace" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="@string/widget_name"
+        android:textColor="@color/skin" />
+
+    <TextView style="@style/WidgetVerticalSpace" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView style="@style/WidgetHorizontalSpace" />
+
+        <LinearLayout
+            android:id="@+id/widget_rice_button"
+            style="@style/WidgetButton" >
+
+            <TextView
+                style="@style/WidgetCarbLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_rice" />
+
+        </LinearLayout>
+
+        <TextView style="@style/WidgetHorizontalSpace" />
+
+        <LinearLayout
+            android:id="@+id/widget_snack_button"
+            style="@style/WidgetButton" >
+
+            <TextView
+                style="@style/WidgetCarbLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_snack" />
+
+        </LinearLayout>
+
+        <TextView style="@style/WidgetHorizontalSpace" />
+
+        <LinearLayout
+            android:id="@+id/widget_juice_button"
+            style="@style/WidgetButton" >
+
+            <TextView
+                style="@style/WidgetCarbLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/widget_juice" />
+
+        </LinearLayout>
+
+        <TextView style="@style/WidgetHorizontalSpace" />
+
+    </LinearLayout>
+
+    <TextView style="@style/WidgetVerticalSpace" />
+
+</LinearLayout>
