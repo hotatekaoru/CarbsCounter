@@ -39,6 +39,8 @@ class BasicWidget : AppWidgetProvider() {
 
         val views = RemoteViews(context.packageName, R.layout.basic_widget)
         views.setOnClickPendingIntent(R.id.widget_rice_button, getPendingIntent(context, CarbType.RICE))
+        views.setOnClickPendingIntent(R.id.widget_snack_button, getPendingIntent(context, CarbType.SNACK))
+        views.setOnClickPendingIntent(R.id.widget_juice_button, getPendingIntent(context, CarbType.JUICE))
 
         appWidgetManager.updateAppWidget(appWidgetId, views)
     }
