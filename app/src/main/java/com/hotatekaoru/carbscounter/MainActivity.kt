@@ -22,6 +22,11 @@ class MainActivity : AppCompatActivity() {
         snackCountTextView = findViewById(R.id.snack_count)
         juiceCountTextView = findViewById(R.id.juice_count)
         reloadLabels()
+
+        if (intent != null) {
+            val intentActionName = intent.action
+            print(intentActionName)
+        }
     }
 
     fun onRicePressed(_view: View) {
