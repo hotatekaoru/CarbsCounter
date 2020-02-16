@@ -13,6 +13,7 @@ import android.widget.RemoteViews
 class BasicWidget : AppWidgetProvider() {
     companion object {
         const val INTENT_ACTION_NAME = "TAP_WIDGET_BUTTON"
+        const val PRESSED_BUTTON_TYPE = "PRESSED_BUTTON_TYPE"
     }
 
     override fun onUpdate(
@@ -45,6 +46,7 @@ class BasicWidget : AppWidgetProvider() {
     private fun getPendingIntent(context: Context, type: CarbType): PendingIntent {
 
         val resultIntent = Intent(context, MainActivity::class.java)
+        resultIntent.action = INTENT_ACTION_NAME
         resultIntent.putExtra(PRESSED_BUTTON_TYPE, type.ordinal)
         return PendingIntent.getActivity(context, type.ordinal, resultIntent, Intent.FILL_IN_ACTION)
     }
