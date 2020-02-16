@@ -27,14 +27,6 @@ class BasicWidget : AppWidgetProvider() {
         }
     }
 
-    override fun onEnabled(context: Context) {
-        // Enter relevant functionality for when the first widget is created
-    }
-
-    override fun onDisabled(context: Context) {
-        // Enter relevant functionality for when the last widget is disabled
-    }
-
     private fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
 
         val views = RemoteViews(context.packageName, R.layout.basic_widget)
