@@ -22,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         snackCountTextView = findViewById(R.id.snack_count)
         juiceCountTextView = findViewById(R.id.juice_count)
         reloadLabels()
+
+        if (intent != null && intent.action == BasicWidget.INTENT_ACTION_NAME) {
+            onWidgetButtonPressed()
+        }
     }
 
     fun onRicePressed(_view: View) {
@@ -48,5 +52,13 @@ class MainActivity : AppCompatActivity() {
         snackCountTextView.text = carbs.snack.toString()
         juiceCountTextView.text = carbs.juice.toString()
         totalCountTextView.text = (carbs.rice + carbs.snack + carbs.juice).toString()
+    }
+
+    private fun onWidgetButtonPressed() {
+        when(intent.getIntExtra(BasicWidget.PRESSED_BUTTON_TYPE, 0)) {
+            CarbType.RICE.ordinal -> { onRicePressed(window.decorView) }
+            CarbType.SNACK.ordinal -> { onSnackPressed(window.decorView) }
+            CarbType.JUICE.ordinal -> { onJuicePressed(window.decorView) }
+        }
     }
 }
