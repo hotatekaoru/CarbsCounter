@@ -55,10 +55,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onWidgetButtonPressed() {
-        when(intent.getIntExtra(BasicWidget.PRESSED_BUTTON_TYPE, 0)) {
+        when(intent.getIntExtra(BasicWidget.PRESSED_BUTTON_TYPE, -1)) {
             CarbType.RICE.ordinal -> { onRicePressed(window.decorView) }
             CarbType.SNACK.ordinal -> { onSnackPressed(window.decorView) }
             CarbType.JUICE.ordinal -> { onJuicePressed(window.decorView) }
+            else -> { /* do nothing */ }
         }
     }
 }
